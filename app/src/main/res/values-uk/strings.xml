@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RentSafePlaceMobile</string>
+    <string name="building_name">Назва будівлі</string>
+    <string name="building_description">Опис будівлі</string>
+    <string name="edit">Редагувати</string>
+    <string name="change_password">Змінити пароль</string>
+    <string name="logout">Вийти</string>
+    <string name="delete_account">Видалити акаунт</string>
+    <string name="enter_a_city_to_find_out_the_average_rental_price">Введіть назву міста, щоб дізнатися середню ціну оренди:</string>
+    <string name="get_average_price">Отримати середню ціну</string>
+    <string name="buildings">Будівлі</string>
+    <string name="see_realtor">Подивитися ріелтора</string>
+    <string name="upload_image">Завантажити зображення</string>
+    <string name="email">Електронна пошта:</string>
+    <string name="name">Ім\'я:</string>
+    <string name="phone">Телефон:</string>
+    <string name="save">Зберегти</string>
+    <string name="login">Увійти</string>
+    <string name="password">Пароль:</string>
+    <string name="don_t_have_an_account">Ще не маєте акаунту?</string>
+    <string name="register">Зареєструватися</string>
+    <string name="email_register">Електронна пошта</string>
+    <string name="password_register">Пароль</string>
+    <string name="name_register">Ім\'я</string>
+    <string name="phone_register">Телефон</string>
+    <string name="account">Акаунт</string>
+    <string name="type">Тип:</string>
+    <string name="square">Площа:</string>
+    <string name="price">Ціна:</string>
+    <string name="yes">так</string>
+    <string name="no">ні</string>
+    <string name="pets_allowed">Дозволено домашніх тварин:</string>
+    <string name="description">Опис:</string>
+    <string name="category">Категорія:</string>
+    <string name="city">Місто:</string>
+    <string name="address">Адреса:</string>
+    <string name="realtor">Ріелтор:</string>
+    <string name="unknown">Невідомо</string>
+    <string name="info_was_changed">Інформація була змінена</string>
+    <string name="registration_success">Реєстрація пройшла успішно</string>
+    <string name="money">₴</string>
+
+</resources>

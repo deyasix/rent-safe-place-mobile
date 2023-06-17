@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutStatistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewTitle"
+            android:gravity="center"
+            android:padding="16dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text="@string/enter_a_city_to_find_out_the_average_rental_price"
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextCity"
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_height="wrap_content" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonGetPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_average_price"/>
+            <TextView
+                android:padding="16dp"
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buildings"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutStatistics"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/recyclerView"
+            android:gravity="center"
+            android:padding="16dp"
+            />
+        <androidx.recyclerview.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/building_item"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+

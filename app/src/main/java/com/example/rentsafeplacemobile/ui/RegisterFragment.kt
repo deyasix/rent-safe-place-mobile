@@ -46,10 +46,17 @@ class RegisterFragment: Fragment() {
                 if (response.isSuccessful) {
                     val fragmentManager = requireActivity().supportFragmentManager
                     val transaction = fragmentManager.beginTransaction()
-                    transaction.replace(R.id.frameLayout, LoginFragment())
+                    val loginFragment = LoginFragment()
+                    val mainActivity = activity as? MainActivity
+                    if (mainActivity != null) {
+                        loginFragment.onLoginSuccessListener = mainActivity
+                        transaction.replace(R.id.frameLayout, loginFragment)
+                    } else {
+                        transaction.replace(R.id.frameLayout, LoginFragment())
+                    }
                     transaction.addToBackStack(null)
                     transaction.commit()
-                    Toast.makeText(requireContext(), resources.getString(R.string.registration_success), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), resources.getString(R.string.registration_success), Toast.LENGTH_LONG).show()
                 } else {
 
                 }

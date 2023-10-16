@@ -53,7 +53,11 @@ class BuildingFragment : Fragment(), BuildingAdapter.BuildingItemClickListener {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.averagePriceState.collect { averagePrice ->
-                    binding.textViewPrice.text = averagePrice?.toString() ?: resources.getString(R.string.unknown)
+                    binding.textViewPrice.text = if (averagePrice == null) {
+                        resources.getString(R.string.unknown)
+                    } else {
+                        averagePrice.toString() + resources.getString(R.string.money)
+                    }
                 }
             }
         }

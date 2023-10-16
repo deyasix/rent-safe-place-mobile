@@ -96,7 +96,7 @@ class EditAccountFragment : Fragment() {
                 val phone = editTextPhone.text.toString()
                 if (tenant != null) {
                     viewModel.editInfo(Tenant(tenant!!.id, email, tenant!!.password, name, phone, tenant?.photo))
-                    Toast.makeText(this@EditAccountFragment.requireContext(), resources.getString(R.string.info_was_changed) + " ", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@EditAccountFragment.requireContext(), resources.getString(R.string.info_was_changed) + " ", Toast.LENGTH_LONG).show()
                     requireActivity().supportFragmentManager.popBackStack()
                 }
             }

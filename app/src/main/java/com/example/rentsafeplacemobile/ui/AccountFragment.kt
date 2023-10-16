@@ -1,5 +1,6 @@
 package com.example.rentsafeplacemobile.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +25,17 @@ class AccountFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: InfoViewModel by viewModels()
-
+    var listener: OnLanguageChangedListener? = null
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnLanguageChangedListener) {
+            listener = context
+        }
+    }
+    override fun onDetach() {
+        super.onDetach()
+        listener = null
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -95,10 +106,14 @@ class AccountFragment : Fragment() {
                 }
             }
         }
+        listener?.onLanguageChanged()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    interface OnLanguageChangedListener {
+        fun onLanguageChanged()
     }
 }

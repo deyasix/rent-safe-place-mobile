@@ -87,6 +87,7 @@ class AccountFragment : Fragment() {
         return view
     }
 
+    @SuppressLint("SetTextI18n")
     fun setUI(){
         lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {

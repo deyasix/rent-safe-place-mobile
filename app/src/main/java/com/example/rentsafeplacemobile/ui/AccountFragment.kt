@@ -1,5 +1,6 @@
 package com.example.rentsafeplacemobile.ui
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -86,6 +87,7 @@ class AccountFragment : Fragment() {
         return view
     }
 
+    @SuppressLint("SetTextI18n")
     fun setUI(){
         lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
